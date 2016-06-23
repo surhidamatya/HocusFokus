@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/single_day_task_padding"
+        android:paddingLeft="@dimen/single_day_task_padding"
+        android:paddingRight="@dimen/single_day_task_padding"
+        android:paddingStart="@dimen/single_day_task_padding"
+        android:paddingTop="@dimen/single_day_task_padding">
+
+        <TextView
+            android:id="@+id/txt_taskAddedDate"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/single_day_task_date_text_size"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/single_day_task_margin"
+            android:layout_weight="4"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        style="@style/horizontal_divider" />
+</LinearLayout>
+

@@ -1,0 +1,83 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/active_task_timer_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="com.leapfrog.hokusfokus.fragment.ActiveTaskTimer">
+
+        <LinearLayout
+            android:id="@+id/layout_current_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/current_date_height"
+            android:layout_margin="@dimen/normal_margin"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/clock_calendar" />
+
+            <TextView
+                android:id="@+id/txt_active_task_date"
+                style="@style/active_timer_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <com.leapfrog.hokusfokus.widget.ProgressView
+            android:id="@+id/progressView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/circle_padding"
+            app:center_text_size="@dimen/progress_view_center_text_size"
+            app:gap_between_circle="@dimen/gap_between_circle"
+            app:stroke_width="@dimen/stroke_width_circle" />
+
+        <TextView
+            android:id="@+id/txt_focus_hour_timer"
+            style="@style/count_down_timer_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/timer_height"
+            android:gravity="center"
+            android:text="@string/timer_default_text" />
+
+        <LinearLayout
+            android:id="@+id/layout_task_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/task_title_height"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/active_task_string_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/active_task" />
+
+            <TextView
+                android:id="@+id/txt_active_task_title"
+                style="@style/active_task_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

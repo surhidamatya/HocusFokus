@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.leapfrog.hokusfokus.activity.SettingActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/material_design_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_reminder_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_reminder" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/img_reminder_icon"
+                android:layout_toRightOf="@+id/img_reminder_icon"
+                android:text="@string/reminder"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/settings_text_size" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_Reminder"
+                style="@style/Material.Widget.Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_set_task_reminder"
+            style="@style/material_design_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="showDialog">
+
+            <ImageView
+                android:id="@+id/img_action_assignment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_action_assignment" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/img_action_assignment"
+                android:layout_toRightOf="@+id/img_action_assignment"
+                android:text="@string/set_task_reminder"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/settings_text_size" />
+
+            <TextView
+                android:id="@+id/txt_taskReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/five_min"
+                android:textColor="@color/secondary_text" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_set_focus_hour_reminder"
+            style="@style/material_design_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="showDialog"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_action_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_action_alarm" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/img_action_alarm"
+                android:layout_toRightOf="@+id/img_action_alarm"
+                android:text="@string/set_focus_hour_reminder"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/settings_text_size" />
+
+            <TextView
+                android:id="@+id/txt_focusHourReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/five_min"
+                android:textColor="@color/secondary_text" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_focus_hour"
+            style="@style/material_design_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="showDialog"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_action_alarm_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_action_alarm" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/img_action_alarm_focus"
+                android:layout_toRightOf="@+id/img_action_alarm_focus"
+                android:text="@string/focus_hour"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/settings_text_size" />
+
+            <TextView
+                android:id="@+id/txt_focusHourTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/five_min"
+                android:textColor="@color/secondary_text" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

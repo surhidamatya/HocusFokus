@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.leapfrog.hokusfokus.fragment.ActiveTaskTimer">
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/active_task_string_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/active_task" />
+
+        <TextView
+            android:id="@+id/txt_active_task_title"
+            style="@style/active_task_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/empty_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/txt_active_task_date"
+            style="@style/active_timer_text_style"
+            android:text="00000000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:drawableLeft="@drawable/clock_calendar"
+            android:drawablePadding="20dp"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/progressView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:gap_between_circle="80dp"
+            android:layout_below="@id/txt_active_task_date"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/black"/>
+
+    <TextView
+        android:layout_below="@+id/progressView"
+        android:id="@+id/txt_focus_hour_timer"
+        style="@style/count_down_timer_style"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/timer_default_text"
+        />
+
+
+
+
+
+</RelativeLayout>

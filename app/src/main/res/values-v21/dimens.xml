@@ -1,0 +1,63 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="normal_padding">10dp</dimen>
+    <dimen name="normal_margin">10dp</dimen>
+    <dimen name="normal_text_size">18sp</dimen>
+
+    <dimen name="activity_settings_padding">8dp</dimen>
+
+    <dimen name="material_text_button">14sp</dimen>
+    <dimen name="activity_settings_subhead_margin">6dp</dimen>
+
+    <dimen name="time_picker_margin_left">20dp</dimen>
+
+    <dimen name="active_timer_current_text">18sp</dimen>
+    <dimen name="count_down_timer_text_size">35sp</dimen>
+    <dimen name="active_task_text_size">20sp</dimen>
+    <dimen name="active_task_title_text_size">18sp</dimen>
+
+    <dimen name="fab_button_elevation">6dp</dimen>
+    <dimen name="fab_button_pressed_translation">12dp</dimen>
+    <dimen name="fab_button_margin">16dp</dimen>
+
+    <dimen name="empty_text_size">25sp</dimen>
+    <dimen name="single_day_task_padding">10dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="single_day_task_date_text_size">18sp</dimen>
+    <dimen name="single_day_task_margin">10dp</dimen>
+    <dimen name="activity_history_view_pager_height">1000dp</dimen>
+
+    <dimen name="activity_history_margin_left">16dp</dimen>
+    <dimen name="activity_history_text_size">20sp</dimen>
+    <dimen name="activity_history_margin_bottom">20dp</dimen>
+    <dimen name="activity_history_arrow_size">20dp</dimen>
+    <dimen name="activity_history_margin_right">20dp</dimen>
+
+    <dimen name="horizontal_divider_height">1dp</dimen>
+
+    <dimen name="margin_bottom_active_task_listing_arrow">30dp</dimen>
+
+    <dimen name="settings_text_size">18sp</dimen>
+
+    <dimen name="sliding_up_panel_height">40dp</dimen>
+    <dimen name="sliding_up_panel_shadow_height">1dp</dimen>
+    <dimen name="sliding_up_panel_parallax_offset">100dp</dimen>
+    <dimen name="activity_history_collapsing_toolbar_height">160dp</dimen>
+    <dimen name="watch_dailog_text_view_width">50dp</dimen>
+    <dimen name="activity_main_sliding_up_padding_top">10dp</dimen>
+    <dimen name="activity_main_sliding_up_padding_bottom">10dp</dimen>
+
+    <dimen name="padding_left">16dp</dimen>
+    <dimen name="padding_right">8dp</dimen>
+    <dimen name="padding_top">8dp</dimen>
+    <dimen name="new_task_text_size">14sp</dimen>
+    <dimen name="card_view_height">60dp</dimen>
+
+    <!-- dimension for circle in active task timer-->
+    <dimen name="gap_between_circle">80dp</dimen>
+
+
+</resources>

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/white">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoOverlay="false"
+        sothree:umanoPanelHeight="@dimen/sliding_up_panel_height"
+        sothree:umanoParalaxOffset="@dimen/sliding_up_panel_parallax_offset"
+        sothree:umanoShadowHeight="@dimen/sliding_up_panel_shadow_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/tool_bar"
+                layout="@layout/tool_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--loads ActiveTaskTimer Fragment -->
+
+            <LinearLayout
+                android:id="@+id/activeTaskListingParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/activity_main_sliding_up_padding_bottom"
+                android:paddingTop="@dimen/activity_main_sliding_up_padding_top"
+                android:src="@drawable/ic_navigation_expand_less" />
+
+            <fragment
+                android:id="@+id/activeTaskListing"
+                android:name="com.leapfrog.hokusfokus.fragment.ActiveTaskListing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</RelativeLayout>

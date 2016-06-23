@@ -1,0 +1,115 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+
+    repositories {
+        // ...
+        maven { url "https://jitpack.io" }
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+repositories {
+    mavenCentral()
+    maven() {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.leapfrog.hokusfokus"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keys/hokusfocus.jks")
+            storePassword rootProject.ext.storePassword
+            keyAlias rootProject.ext.keyAlias
+            keyPassword rootProject.ext.keyPassword
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "DEBUG_MODE", 'true'
+        }
+        release {
+            buildConfigField "boolean", "DEBUG_MODE", 'false'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/values-mdpi', 'src/main/res/values-hdpi']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Android Support Libraries
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:cardview-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
+
+    //slidingUpPanel
+    // URl:https://github.com/umano/AndroidSlidingUpPanel
+    compile 'com.sothree.slidinguppanel:library:3.0.0'
+
+    // Image
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // UI-Views libraries
+    compile 'com.github.rey5137:material:1.1.1'
+    compile 'com.jakewharton:butterknife:6.1.0'
+
+    // Event Bus
+    compile 'com.squareup:otto:1.3.7'
+
+    //for app introduction
+    //git hub url:https://github.com/PaoloRotolo/AppIntro
+    compile 'com.github.paolorotolo:appintro:3.0.0'
+
+    //for memeory leak
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.4.0@aar') {
+        transitive = true;
+    }
+
+    //license dialog box
+    compile('de.psdev.licensesdialog:licensesdialog:1.7.0')
+
+    //walk through
+    compile 'com.github.amlcurran.showcaseview:library:5.0.0'
+
+    compile('com.github.worker8:tourguide:1.0.13-SNAPSHOT@aar') {
+        transitive = true
+    }
+
+
+}

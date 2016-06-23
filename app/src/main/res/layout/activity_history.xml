@@ -1,0 +1,105 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_history_view_pager_height" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_history_collapsing_toolbar_height"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_flexible_space"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <TextView
+            android:id="@+id/txt_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_history_margin_left"
+            android:layout_marginStart="@dimen/activity_history_margin_left"
+            android:text="@string/activity_history_year"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_history_text_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_history_margin_bottom"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll">
+
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 android:text="2015"
+                 android:textColor="#ffffff" />-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/activity_history_margin_right"
+                android:layout_marginRight="@dimen/activity_history_margin_right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_leftBackArrow"
+                    android:layout_width="@dimen/activity_history_arrow_size"
+                    android:layout_height="@dimen/activity_history_arrow_size"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/previous_arrow" />
+
+                <ImageView
+                    android:id="@+id/img_rightBackArrow"
+                    android:layout_width="@dimen/activity_history_arrow_size"
+                    android:layout_height="@dimen/activity_history_arrow_size"
+                    android:layout_marginLeft="@dimen/activity_history_arrow_size"
+                    android:layout_marginStart="@dimen/activity_history_arrow_size"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/next_arrow" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

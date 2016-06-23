@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leapfrog.hokusfokus">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permission to start Alarm on device reboot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+
+    <application
+        android:name=".HokusFocusApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.HokusFokus">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HokusFokus"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.TestActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SplashActivity" />
+        </activity>
+
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.NewTaskActivity"
+            android:label="@string/title_activity_new_task"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="94a5abc5a9f4299ebb840c35fe62af611c0bfe09" />
+
+        <service android:name=".service.TimerService" />
+
+        <activity
+            android:name=".activity.HistoryActivity"
+            android:label="@string/title_activity_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AppIntroActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- Will not be called unless the application explicitly enables it -->
+        <receiver
+            android:name=".receivers.DeviceBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receivers.HokusFocusAlarm"></receiver>
+
+        <service android:name=".service.HokusFocusService"></service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#03A9F4</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="grey_fade">#66CCCC</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="primaryColor">#2196F3</color>
+    <color name="primaryDarkColor">#1976D2</color>
+    <color name="primaryLightColor">#64B5F6</color>
+    <color name="accentColor">#1976D2</color>
+    <color name="primaryTextColor">#212121</color>
+    <color name="secondaryTextColor">#727272</color>
+
+    <color name="dividerColor">#B6B6B6</color>
+
+    <color name="colorControlNormal">#FF78909C</color>
+    <color name="colorControlActivated">#FF03A9F4</color>
+    <color name="colorSwitchThumbNormal">#FF78909C</color>
+
+    <color name="task_not_completed">#ff7043</color>
+    <color name="task_done_color">#66bb6a</color>
+    <color name="task_not_started">#bdbdbd</color>
+
+    <color name="single_day_task_divider">#DDDFE0</color>
+
+    <color name="titleTextColor">@android:color/white</color>
+
+    <color name="active_task_string">#bdbdbd</color>
+    <color name="active_task_title">#bdbdbd</color>
+
+    <color name="fab_color">#e91e63</color>
+
+    <drawable name="black_image">@color/black</drawable>
+</resources>

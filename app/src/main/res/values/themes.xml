@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.HokusFokus" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBar">false</item>
+        <!--<item name="colorControlNormal">@color/colorControlNormal</item>-->
+        <!--<item name="colorControlActivated">@color/colorControlActivated</item>-->
+        <!--<item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>-->
+    </style>
+
+    <style name="Theme.HokusFokus" parent="Base.Theme.HokusFokus">
+
+      <!--  <item name="android:windowBackground">@drawable/branded_logo</item>
+        <item name="android:windowFullscreen">true</item>-->
+    </style>
+
+
+</resources>
